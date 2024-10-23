@@ -69,3 +69,33 @@
     //obj={...obj,[p[i]]:v[i]}
 // }
 // console.log(obj)
+
+
+// let a=[{"pid":101,"name":"com","price":98000},
+//     {"pid":102,"name":"mobile","price":38000},
+//     {"pid":103,"name":"mouse","price":98000},
+//     {"pid":104,"name":"tab","price":98000}]
+
+// for(let i in a)
+// {
+//     console.log(i,a[i])
+// }
+// for (let i in a)
+// {
+//     console.log(a[i].pid)
+//     console.log(a[i].name)
+//     console.log(a[i].price)
+//     console.log("-------")
+// }
+
+//Display product details whose price >25000
+for(let i in a)
+{
+    if(a[i].price>25000)
+    {
+        console.log(a[i].pid)
+        console.log(a[i].name)
+        console.log(a[i].price)
+        console.log("---")
+    }
+}

@@ -512,3 +512,85 @@
 // console.log(x.flat(1))
 // console.log(x.flat(2))
 // console.log(x.flat(3))
+
+//multiplication without using * symbol
+// let a=5
+// let b=10
+// let s=0
+// for(let i=1;i<=b;i++)
+// {
+//         s=s+a
+// }
+// console.log(s)
+
+//Finding mjissing no from given array
+// let a=[5,8,2,7,3,6]
+// m=Math.min(...a)
+// n=Math.max(...a)
+// for(let i=m;i<n;i++)
+// {
+//         if(!a.includes(i))
+//         {
+//                 console.log(i)
+//                 break
+//         }
+// }
+
+//or
+
+// a.sort((x,y)=>x-y)
+// for(let i=0;i<a.length-1;i++)
+// {
+//         if(a[i+1]-a[i]!=1)
+//         {
+//                 console.log(a[i]+1)
+//                 break
+//         }
+// }
+
+//Division operation without / symbol
+
+
+
+//Display lonely integer from given array
+// let a=[1,2,3,3,4,5,5,5,5]
+// for(let k of [...new Set(a)])
+// {
+//         let c=0
+//         for(let i=0;i<a.length;i++)
+//         {
+//                 if(a[i]==k)
+//                 {
+//                         c++
+//                 }
+//         }
+//         if(c==1)
+//         {
+//                 console.log(k)
+//                 // break
+//         }
+// }
+
+
+//swapping numbers
+// let a=[5,8,2,7,4,6]
+// t=a[0]
+// a[0]=a[a.length-1]
+// a[a.length-1]=t
+// console.log(a)
+
+
+//Reverse array elements
+//let a=[5,8,2,7,4,6]    //even array
+//let a=[5,8,2,7,4]      //odd array
+// for (let i=0,j=a.length-1;i<j;i++,j--)
+// {
+//         t=a[i]
+//         a[i]=a[j]
+//         a[j]=t
+// }
+// console.log(a)
+
+
+
+

@@ -147,3 +147,5 @@ let a=[{"sid":101,"name":"Anu","dept":"etc","marks":93},
         }
     }
     console.log(a)
+
+    

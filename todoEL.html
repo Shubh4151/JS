@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            color: crimson;
+            background-color: bisque;
+        }
+        button{
+            color: green;
+            background-color: lightgoldenrodyellow;
+            margin: 10px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <button>Add</button>
+    <ul>
+
+    </ul>
+
+    <script>
+        let ir=document.getElementsByTagName("input")[0]
+        let br=document.getElementsByTagName("button")[0]
+        let ulr=document.getElementsByTagName("ul")[0]
+        let er=null
+        br.addEventListener("click",Add)
+        function Add(){
+            let li=document.createElement("li")
+            let span=document.createElement("span")
+            span.innerHTML=ir.value
+            let edbtn=document.createElement("button")
+            edbtn.innerHTML="Edit"
+            edbtn.addEventListener("click",()=>edit(span))
+            let delbtn=document.createElement("button")
+            delbtn.innerHTML="Delete"
+            delbtn.addEventListener("click",()=>del(li))
+            li.appendChild(span)
+            li.appendChild(edbtn)
+            li.appendChild(delbtn)
+            ulr.appendChild(li)
+            ir.value=""
+        }
+        function del(er){
+            ulr.removeChild(er)
+        }
+        function edit(sr){
+            ir.value=sr.innerHTML
+            br.innerHTML="update"
+            br.removeEventListener("click",Add)
+            br.addEventListener("click",Upd)
+            er=sr
+        }
+        function Upd(){
+            er.innerHTML=ir.value
+            br.innerHTML="add"
+            br.removeEventListener("click",Upd)
+            br.addEventListener("click",Add)
+            ir.value=" "
+        }
+    </script>
+</body>
+</html>
